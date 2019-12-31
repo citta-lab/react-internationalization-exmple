@@ -5,11 +5,11 @@ const Card = ({ number, type, description }) => {
         <div className="card">
             <div className="card-left">
                 <span>+</span>
-                <h2>1</h2>
+                <h2>{number}</h2>
             </div>
             <div className="card-right">
-                <h3>Number</h3>
-                <span>Displaying 2345678187243 in regional format </span>
+                <h3>{type}</h3>
+                <span>{description}</span>
             </div>
         </div>
     )

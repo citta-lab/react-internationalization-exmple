@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Cards from './components/Cards';
 import CardManager from './components/cards/CardManager';
 
 function App() {
@@ -9,7 +8,6 @@ function App() {
       <header className="App-header">
         <title>Internationalization</title>
       </header>
-      <Cards />
       <CardManager />
     </div>
   );
