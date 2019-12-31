@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Cards from './components/Cards';
+import CardManager from './components/cards/CardManager';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <title>Internationalization</title>
       </header>
       <Cards />
+      <CardManager />
     </div>
   );
 }
