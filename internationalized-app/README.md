@@ -17,7 +17,9 @@ The idea of breaking single Cards component to just the `Card` and use the same 
 
 ### 2. Adding React-Intl
 Enabling components to adopt for Internationalization. Making use of this [example](https://github.com/formatjs/react-intl) to implement the react-intl.
-
-
+2.1 We enabled the app to embrace react-intl by wrapping the app with higher order compoment `IntlProvider` with locale as english. 
+2.2 We made use of FormattedMessage to translate the data, but buy default we provided some static message in the
+code.
+2.3 Provided actual translation json file along with locale using `IntlProvider`. In reality, the default messages we provided in FormattedMessage should be english and we would focus on other language json file in translation. However i have used english to just diffrenciate the text. 
 
 

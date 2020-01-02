@@ -1,0 +1,6 @@
+{
+    "card.number": "Processed number {value} to display in regional format",
+    "card.string": "Great example of presenting string in respective regional format",
+    "card.date": "Presenting date {value} in regional format",
+    "card.plural": "Example of handling plural sitation, You have picked {value} apples"
+}
