@@ -16,7 +16,7 @@ The idea of breaking single Cards component to just the `Card` and use the same 
 1.3 Loop though the data and render the Card. ( Ah, we would only call once )
 
 ### 2. Adding React-Intl
-Enabling components to adopt for Internationalization.
+Enabling components to adopt for Internationalization. Making use of this [example](https://github.com/formatjs/react-intl) to implement the react-intl.
 
 
 
