@@ -21,5 +21,6 @@ Enabling components to adopt for Internationalization. Making use of this [examp
 2.2 We made use of FormattedMessage to translate the data, but buy default we provided some static message in the
 code.
 2.3 Provided actual translation json file along with locale using `IntlProvider`. In reality, the default messages we provided in FormattedMessage should be english and we would focus on other language json file in translation. However i have used english to just diffrenciate the text. 
+2.4 Added spanish version of translation and changed the locale in index file to get reflected while rendering.
 
 
