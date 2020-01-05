@@ -7,23 +7,23 @@ const CardManager = () => {
     const cardData = [
         {
             number: 1,
-            type: 'Number',
-            description: 'Displaying 2345678187243 in regional format'
+            type: 'number',
+            value: '2345678187243'
         },
         {
             number: '2',
-            type: 'Date',
-            description: 'Displaying date 09/12/2019 in regional format'
+            type: 'date',
+            value: '09/12/2019'
         },
         {
             number: '3',
-            type: 'String',
-            description: 'Such as web services, scripts, configurations'
+            type: 'string',
+            value: ''
         },
         {
             number: '4',
-            type: 'Plural',
-            description: 'Web projects and ensure the quality of delivery'
+            type: 'plural',
+            value: '100'
         }
     ];
 
@@ -33,7 +33,7 @@ const CardManager = () => {
                 key={card.number}
                 number={card.number}
                 type={card.type}
-                description={card.description}
+                value={card.value}
             />
         )
     })
