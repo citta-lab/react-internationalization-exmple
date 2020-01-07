@@ -1,9 +1,9 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedDate } from 'react-intl';
 
-const Card = ({ number, type, value }) => {
+const Card = ({ number, type, data }) => {
 
-    const renderMessage = buildFormattedMessage(type, value);
+    const renderMessage = buildFormattedMessage(type, data);
 
     return (
         <div className="card">
@@ -21,38 +21,48 @@ const Card = ({ number, type, value }) => {
     )
 };
 
-const buildFormattedMessage = (type, value) => {
+const buildFormattedMessage = (type, data) => {
     switch (type) {
         case 'number':
             return (
                 <FormattedMessage
                     id='card.number'
-                    defaultMessage={`Displaying {value} number in regional format`}
-                    values={{ value }}
+                    defaultMessage={`Displaying {data} number in regional format`}
+                    values={{ data }}
                 />
             );
         case 'string':
             return (
                 <FormattedMessage
                     id='card.string'
-                    defaultMessage={`Displaying {value} string in regional format`}
-                    values={{ value }}
+                    defaultMessage={`Displaying {data} string in regional format`}
+                    values={{ data }}
                 />
             );
         case 'date':
+
+            const testDate = <FormattedDate value={new Date(1459832991883)} />;
+            console.log(testDate);
+            console.log(data)
+
             return (
                 <FormattedMessage
                     id='card.date'
-                    defaultMessage={`Example of displaying {value} date in regional format`}
-                    values={{ value }}
-                />
+                    defaultMessage={`Example of displaying {data} date in regional format`}
+                    values={{ data: <FormattedDate
+                        value={new Date(data)}
+                        year="numeric"
+                        month="long"
+                        day="2-digit"
+                      /> }}
+               />
             );
         case 'plural':
             return (
                 <FormattedMessage
                     id='card.plural'
-                    defaultMessage={`One more example of displaying {value} plural scenatio in regional format`}
-                    values={{ value }}
+                    defaultMessage={`One more example of displaying {data} plural scenatio in regional format`}
+                    values={{ data }}
                 />
             );
         default:

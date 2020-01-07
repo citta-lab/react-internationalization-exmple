@@ -1,6 +1,6 @@
 {
-    "card.number": "Número procesado {value} para mostrar en formato regional",
+    "card.number": "Número procesado {data} para mostrar en formato regional",
     "card.string": "Gran ejemplo de presentación de cadena en formato regional respectivo",
-    "card.date": "Fecha de presentación {value} en formato regional",
-    "card.plural": "Ejemplo de manejo de una situación plural. Has elegido manzanas {value}"
+    "card.date": "Fecha de presentación {data} en formato regional",
+    "card.plural": "Ejemplo de manejo de una situación plural. Has elegido manzanas {data}"
 }   

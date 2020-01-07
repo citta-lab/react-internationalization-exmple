@@ -1,0 +1,6 @@
+{
+    "card.number": "Numéro traité {data} à afficher au format régional",
+    "card.string": "Excellent exemple de présentation d'une chaîne dans un format régional respectif",
+    "card.date": "Date de présentation {data} au format régional",
+    "card.plural": "Exemple de gestion de la sitation plurielle, Vous avez sélectionné {data} pommes"
+}   
