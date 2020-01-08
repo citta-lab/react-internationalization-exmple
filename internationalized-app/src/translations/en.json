@@ -1,6 +1,6 @@
 {
-    "card.number": "Processed number {data} to display in regional format",
+    "card.number": "Processed number {data} to display in regional format [{customNumber}].",
     "card.string": "Great example of presenting string in respective regional format",
-    "card.date": "Presenting date {data} in regional format",
+    "card.date": "Presenting date {data} in regional format [{customDate}]",
     "card.plural": "Example of handling plural sitation, You have picked {data} apples"
 }

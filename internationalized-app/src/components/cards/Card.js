@@ -1,5 +1,6 @@
+/* eslint-disable react/style-prop-object */
 import React from 'react';
-import { FormattedMessage, FormattedDate } from 'react-intl';
+import { FormattedMessage, FormattedDate, FormattedNumber } from 'react-intl';
 
 const Card = ({ number, type, data }) => {
 
@@ -27,8 +28,19 @@ const buildFormattedMessage = (type, data) => {
             return (
                 <FormattedMessage
                     id='card.number'
-                    defaultMessage={`Displaying {data} number in regional format`}
-                    values={{ data }}
+                    defaultMessage={`Displaying {data} number in regional format. [{customNumber}]`}
+                    values={
+                        { 
+                            data : <FormattedNumber value={data} />,
+                            customNumber: <FormattedNumber
+                                value={data}
+                                style='unit'
+                                unit="kilobyte"
+                                unitDisplay="narrow"
+                            />
+
+                        }
+                    }
                 />
             );
         case 'string':
@@ -40,21 +52,21 @@ const buildFormattedMessage = (type, data) => {
                 />
             );
         case 'date':
-
-            const testDate = <FormattedDate value={new Date(1459832991883)} />;
-            console.log(testDate);
-            console.log(data)
-
             return (
                 <FormattedMessage
                     id='card.date'
-                    defaultMessage={`Example of displaying {data} date in regional format`}
-                    values={{ data: <FormattedDate
-                        value={new Date(data)}
-                        year="numeric"
-                        month="long"
-                        day="2-digit"
-                      /> }}
+                    defaultMessage={`Example of displaying {data} date in regional format [{customDate}]`}
+                    values={
+                        { 
+                            data: <FormattedDate value={data} />, 
+                            customDate: <FormattedDate 
+                                value={data}
+                                year="numeric"
+                                month="long"
+                                day="2-digit"
+                            />
+                        }
+                    }
                />
             );
         case 'plural':

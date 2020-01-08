@@ -18,7 +18,7 @@ const CardManager = () => {
         {
             number: '2',
             type: 'date',
-            value: '09/12/2019'
+            value: '09/21/2019'
         },
         {
             number: '3',
