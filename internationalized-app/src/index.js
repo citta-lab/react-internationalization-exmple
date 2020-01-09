@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { IntlProvider } from 'react-intl';
-import {fr} from './translations'
+import {en} from './translations'
 
 
 import './index.css';
@@ -10,7 +10,7 @@ import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
-    <IntlProvider locale="fr" messages={fr}>
+    <IntlProvider locale="en" messages={en}>
         <App />
     </IntlProvider>,
     document.getElementById('root')

@@ -18,12 +18,12 @@ const CardManager = () => {
         {
             number: '2',
             type: 'date',
-            value: '09/21/2019'
+            value: '04/17/1964'
         },
         {
             number: '3',
             type: 'string',
-            value: ''
+            value: {date: '09/21/2019', money: '54670'}
         },
         {
             number: '4',

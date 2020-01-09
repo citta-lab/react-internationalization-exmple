@@ -1,6 +1,6 @@
 /* eslint-disable react/style-prop-object */
 import React from 'react';
-import { FormattedMessage, FormattedDate, FormattedNumber } from 'react-intl';
+import { FormattedMessage, FormattedDate, FormattedNumber, FormattedDateParts } from 'react-intl';
 
 const Card = ({ number, type, data }) => {
 
@@ -28,7 +28,7 @@ const buildFormattedMessage = (type, data) => {
             return (
                 <FormattedMessage
                     id='card.number'
-                    defaultMessage={`Displaying {data} number in regional format. [{customNumber}]`}
+                    defaultMessage={`Around {data} male elderly people lived in 2018 around the World & weight about {customNumber}`}
                     values={
                         { 
                             data : <FormattedNumber value={data} />,
@@ -47,15 +47,24 @@ const buildFormattedMessage = (type, data) => {
             return (
                 <FormattedMessage
                     id='card.string'
-                    defaultMessage={`Displaying {data} string in regional format`}
-                    values={{ data }}
+                    defaultMessage={`I was thinking to buying a new vehicle in {date}, so I looked at my financial information and found out I already owe {money} to the bank.`}
+                    values={
+                        {   
+                            date: <FormattedDate value={data.date}/>,
+                            money: <FormattedNumber 
+                              value={data.money}
+                              style="currency"
+                              currency={'GBP'}
+                            /> 
+                        }
+                    }
                 />
             );
         case 'date':
             return (
                 <FormattedMessage
                     id='card.date'
-                    defaultMessage={`Example of displaying {data} date in regional format [{customDate}]`}
+                    defaultMessage={`On {data} the first ever Mustang car was introduced to the public in america. Which is {customDate}.`}
                     values={
                         { 
                             data: <FormattedDate value={data} />, 

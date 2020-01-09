@@ -1,6 +1,6 @@
 {
-    "card.number": "Numéro traité {data} à afficher au format régional [{customNumber}]",
-    "card.string": "Excellent exemple de présentation d'une chaîne dans un format régional respectif",
-    "card.date": "Date de présentation {data} au format régional [{customDate}]",
+    "card.number": "Environ {data} personnes âgées de sexe masculin vivaient en 2018 dans le monde entier et pesaient environ {customNumber}",
+    "card.string": "Je pensais acheter un nouveau véhicule en {date}, mais j'ai découvert que je devais déjà {money} à la banque.",
+    "card.date": "Sur {data}, la toute première voiture Mustang a été présentée au public en Amérique. Qui est {customDate}.",
     "card.plural": "Exemple de gestion de la sitation plurielle, Vous avez sélectionné {data} pommes"
 }   
