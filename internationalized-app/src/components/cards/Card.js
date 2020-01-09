@@ -1,6 +1,6 @@
 /* eslint-disable react/style-prop-object */
 import React from 'react';
-import { FormattedMessage, FormattedDate, FormattedNumber, FormattedDateParts } from 'react-intl';
+import { FormattedMessage, FormattedDate, FormattedNumber } from 'react-intl';
 
 const Card = ({ number, type, data }) => {
 
@@ -28,7 +28,7 @@ const buildFormattedMessage = (type, data) => {
             return (
                 <FormattedMessage
                     id='card.number'
-                    defaultMessage={`Around {data} male elderly people lived in 2018 around the World & weight about {customNumber}`}
+                    defaultMessage={`Around {data} (male) elderly people lived in 2018 around the World & weight about {customNumber}`}
                     values={
                         { 
                             data : <FormattedNumber value={data} />,
