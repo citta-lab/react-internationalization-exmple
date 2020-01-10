@@ -82,8 +82,8 @@ const buildFormattedMessage = (type, data) => {
             return (
                 <FormattedMessage
                     id='card.plural'
-                    defaultMessage={`One more example of displaying {data} plural scenatio in regional format`}
-                    values={{ data }}
+                    defaultMessage={`Hello there, you have {unreadCount, number} {unreadCount, plural, one {unread message in your mail box. } other {messages in your mail box, please read.}}`}
+                    values={{ unreadCount: data }}
                 />
             );
         default:
