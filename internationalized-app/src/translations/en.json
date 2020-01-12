@@ -2,5 +2,5 @@
     "card.number": "Around {data} (male) elderly people lived in 2018 around the World & weight about {customNumber}.",
     "card.string": "I was thinking to buying a new vehicle in {date}, but I found out I already owe {money} to the bank.",
     "card.date": "On {data} the first ever Mustang car was introduced to the public in america. Which is {customDate}.",
-    "card.plural": "Example of handling plural sitation, You have picked {data} apples"
+    "card.plural": "Hello there, you have {unreadCount, number} {unreadCount, plural, one {unread message in your mail box. } other {messages in your mail box, please read.}}"
 }
