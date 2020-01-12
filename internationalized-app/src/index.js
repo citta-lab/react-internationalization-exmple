@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { IntlProvider } from 'react-intl';
-import en from './translations/en.json';
-import es from './translations/es.json';
+import {en,fr,es} from './translations'
 
 
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
 ReactDOM.render(
-    <IntlProvider locale="es" messages={es}>
+    <IntlProvider locale="en" messages={en}>
         <App />
     </IntlProvider>,
     document.getElementById('root')

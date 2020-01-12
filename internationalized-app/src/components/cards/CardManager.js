@@ -4,6 +4,11 @@ import Card from './Card';
 
 const CardManager = () => {
 
+    /**
+     * Let us imagine we are fetching this data from API or database. To keep this
+     * topic focused, I have created array of objects which can be used in our card
+     * components.
+     */
     const cardData = [
         {
             number: 1,
@@ -13,12 +18,12 @@ const CardManager = () => {
         {
             number: '2',
             type: 'date',
-            value: '09/12/2019'
+            value: '04/17/1964'
         },
         {
             number: '3',
             type: 'string',
-            value: ''
+            value: {date: '09/21/2019', money: '54670'}
         },
         {
             number: '4',
@@ -33,7 +38,7 @@ const CardManager = () => {
                 key={card.number}
                 number={card.number}
                 type={card.type}
-                value={card.value}
+                data={card.value}
             />
         )
     })

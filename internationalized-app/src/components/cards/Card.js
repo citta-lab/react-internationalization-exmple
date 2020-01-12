@@ -1,9 +1,10 @@
+/* eslint-disable react/style-prop-object */
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedDate, FormattedNumber } from 'react-intl';
 
-const Card = ({ number, type, value }) => {
+const Card = ({ number, type, data }) => {
 
-    const renderMessage = buildFormattedMessage(type, value);
+    const renderMessage = buildFormattedMessage(type, data);
 
     return (
         <div className="card">
@@ -21,38 +22,68 @@ const Card = ({ number, type, value }) => {
     )
 };
 
-const buildFormattedMessage = (type, value) => {
+const buildFormattedMessage = (type, data) => {
     switch (type) {
         case 'number':
             return (
                 <FormattedMessage
                     id='card.number'
-                    defaultMessage={`Displaying {value} number in regional format`}
-                    values={{ value }}
+                    defaultMessage={`Around {data} (male) elderly people lived in 2018 around the World & weight about {customNumber}`}
+                    values={
+                        { 
+                            data : <FormattedNumber value={data} />,
+                            customNumber: <FormattedNumber
+                                value={data}
+                                style='unit'
+                                unit="kilobyte"
+                                unitDisplay="narrow"
+                            />
+
+                        }
+                    }
                 />
             );
         case 'string':
             return (
                 <FormattedMessage
                     id='card.string'
-                    defaultMessage={`Displaying {value} string in regional format`}
-                    values={{ value }}
+                    defaultMessage={`I was thinking to buying a new vehicle in {date}, so I looked at my financial information and found out I already owe {money} to the bank.`}
+                    values={
+                        {   
+                            date: <FormattedDate value={data.date}/>,
+                            money: <FormattedNumber 
+                              value={data.money}
+                              style="currency"
+                              currency={'GBP'}
+                            /> 
+                        }
+                    }
                 />
             );
         case 'date':
             return (
                 <FormattedMessage
                     id='card.date'
-                    defaultMessage={`Example of displaying {value} date in regional format`}
-                    values={{ value }}
-                />
+                    defaultMessage={`On {data} the first ever Mustang car was introduced to the public in america. Which is {customDate}.`}
+                    values={
+                        { 
+                            data: <FormattedDate value={data} />, 
+                            customDate: <FormattedDate 
+                                value={data}
+                                year="numeric"
+                                month="long"
+                                day="2-digit"
+                            />
+                        }
+                    }
+               />
             );
         case 'plural':
             return (
                 <FormattedMessage
                     id='card.plural'
-                    defaultMessage={`One more example of displaying {value} plural scenatio in regional format`}
-                    values={{ value }}
+                    defaultMessage={`Hello there, you have {unreadCount, number} {unreadCount, plural, one {unread message in your mail box. } other {messages in your mail box, please read.}}`}
+                    values={{ unreadCount: data }}
                 />
             );
         default:
