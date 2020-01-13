@@ -41,7 +41,7 @@ const CardManager = () => {
                 data={card.value}
             />
         )
-    })
+    });
 
     return (
         <div className="container ">

@@ -1,10 +1,12 @@
 /* eslint-disable react/style-prop-object */
 import React from 'react';
-import { FormattedMessage, FormattedDate, FormattedNumber } from 'react-intl';
+import { FormattedMessage, FormattedDate, FormattedNumber, injectIntl } from 'react-intl';
 
-const Card = ({ number, type, data }) => {
+const Card = ({ number, type, data, intl }) => {
 
     const renderMessage = buildFormattedMessage(type, data);
+    //const titleMessage = intl.formatMessage({ id: 'card.type'}, {type:type});
+    const titleMsg = intl.formatMessage({ id: 'card.type'}, {type:titleType(type, intl)});
 
     return (
         <div className="card">
@@ -13,7 +15,7 @@ const Card = ({ number, type, data }) => {
                 <h2>{number}</h2>
             </div>
             <div className="card-right">
-                <h3>{type}</h3>
+                <h3 title={titleMsg}>{type}</h3>
                 <span>
                     {renderMessage}
                 </span>
@@ -21,6 +23,21 @@ const Card = ({ number, type, data }) => {
         </div>
     )
 };
+
+const titleType = (type, intl) => {
+    switch(type){
+        case 'number':
+            return intl.formatMessage({id: 'title.number'});
+        case 'string':
+            return intl.formatMessage({id: 'title.string'});
+        case 'date':
+            return intl.formatMessage({id: 'title.date'});
+        case 'plural':
+            return intl.formatMessage({id: 'title.plural'});
+        default:
+            return;
+    }
+}
 
 const buildFormattedMessage = (type, data) => {
     switch (type) {
@@ -91,4 +108,4 @@ const buildFormattedMessage = (type, data) => {
     }
 }
 
-export default Card;
+export default injectIntl(Card);

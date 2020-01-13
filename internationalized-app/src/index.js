@@ -10,7 +10,7 @@ import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
-    <IntlProvider locale="en" messages={en}>
+    <IntlProvider locale="es" messages={es}>
         <App />
     </IntlProvider>,
     document.getElementById('root')
