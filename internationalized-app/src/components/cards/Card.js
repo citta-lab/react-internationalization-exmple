@@ -1,11 +1,11 @@
 /* eslint-disable react/style-prop-object */
 import React from 'react';
-import { FormattedMessage, FormattedDate, FormattedNumber, injectIntl } from 'react-intl';
+import { FormattedMessage, FormattedDate, FormattedNumber, useIntl } from 'react-intl';
 
-const Card = ({ number, type, data, intl }) => {
+const Card = ({ number, type, data }) => {
 
     const renderMessage = buildFormattedMessage(type, data);
-    //const titleMessage = intl.formatMessage({ id: 'card.type'}, {type:type});
+    const intl = useIntl(); // intl extracted from useIntl hook
     const titleMsg = intl.formatMessage({ id: 'card.type'}, {type:titleType(type, intl)});
 
     return (
@@ -108,4 +108,4 @@ const buildFormattedMessage = (type, data) => {
     }
 }
 
-export default injectIntl(Card);
+export default Card;
