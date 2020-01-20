@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { IntlProvider } from 'react-intl';
-import {en,fr,es} from './translations'
+import {en,fr,es} from 'translation-lib/card'; // using from the lib.
 
 
 import './index.css';

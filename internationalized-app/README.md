@@ -23,4 +23,10 @@ code.
 2.3 Provided actual translation json file along with locale using `IntlProvider`. In reality, the default messages we provided in FormattedMessage should be english and we would focus on other language json file in translation. However i have used english to just diffrenciate the text. 
 2.4 Added spanish version of translation and changed the locale in index file to get reflected while rendering.
 
+### 3. Using `translation-lib`
+Consuming `translation-lib` as library using `yarn link` and we need to update the `index.js` in the app to consume the new translations from the lib.
+```
+import {en,fr,es} from 'translation-lib/card';
+```
+
 
