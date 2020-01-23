@@ -52,7 +52,7 @@ const buildFormattedMessage = (type, data) => {
                             customNumber: <FormattedNumber
                                 value={data}
                                 style='unit'
-                                unit="kilobyte"
+                                unit="kilogram"
                                 unitDisplay="narrow"
                             />
 
