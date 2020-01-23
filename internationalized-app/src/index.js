@@ -8,9 +8,17 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+var locale = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || 'en-US';
+const msg = {
+    'en-US': en,
+    'fr-FR': fr,
+    'es-ES': es
+};
+
+// locale = 'es-ES'; [ if you want to test for diff lang by focrcing locale ] 
 
 ReactDOM.render(
-    <IntlProvider locale="en" messages={en}>
+    <IntlProvider locale={locale} messages={msg[locale]}>
         <App />
     </IntlProvider>,
     document.getElementById('root')
