@@ -15,10 +15,11 @@ const msg = {
     'es-ES': es
 };
 
-// locale = 'es-ES'; [ if you want to test for diff lang by focrcing locale ] 
+locale = 'es-ES'; //[ if you want to test for diff lang by focrcing locale ] 
+const message = (locale === 'en-US') ? en : Object.assign({}, en, msg[locale]);
 
 ReactDOM.render(
-    <IntlProvider locale={locale} messages={msg[locale]}>
+    <IntlProvider locale={locale} messages={message}>
         <App />
     </IntlProvider>,
     document.getElementById('root')
