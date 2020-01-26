@@ -45,7 +45,6 @@ const buildFormattedMessage = (type, data) => {
             return (
                 <FormattedMessage
                     id='card.number'
-                    defaultMessage={`Around {data} (male) elderly people lived in 2018 around the World & weight about {customNumber}`}
                     values={
                         { 
                             data : <FormattedNumber value={data} />,
@@ -64,7 +63,6 @@ const buildFormattedMessage = (type, data) => {
             return (
                 <FormattedMessage
                     id='card.string'
-                    defaultMessage={`I was thinking to buying a new vehicle in {date}, so I looked at my financial information and found out I already owe {money} to the bank.`}
                     values={
                         {   
                             date: <FormattedDate value={data.date}/>,
@@ -81,7 +79,6 @@ const buildFormattedMessage = (type, data) => {
             return (
                 <FormattedMessage
                     id='card.date'
-                    defaultMessage={`On {data} the first ever Mustang car was introduced to the public in america. Which is {customDate}.`}
                     values={
                         { 
                             data: <FormattedDate value={data} />, 
@@ -99,7 +96,6 @@ const buildFormattedMessage = (type, data) => {
             return (
                 <FormattedMessage
                     id='card.plural'
-                    defaultMessage={`Hello there, you have {unreadCount, number} {unreadCount, plural, one {unread message in your mail box. } other {messages in your mail box, please read.}}`}
                     values={{ unreadCount: data }}
                 />
             );
